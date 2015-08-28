@@ -22,11 +22,30 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: "en"
+      type: "en-posts"
+    values:
+      layout: "en-post"
+  -
+    scope:
+      path: "en"
+      type: "en"
+    values:
+      layout: "en-page"
 
 sass:
   style: :compressed
 
 collections:
   news:
-
   sidebar:
+  en-news:
+  en-sidebar:
+  en-posts:
+    output: true
+    permalink: en/posts/:path:output_ext
+  en:
+    output: true
+    permalink: en/:path:output_ext

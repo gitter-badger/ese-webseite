@@ -1,0 +1,75 @@
+{% if include.sidebar-items %}{% assign items = include.sidebar-items %}{% else %}{% assign items = site.sidebar %}{% endif %}
+{% if include.pages %}{% assign pages = include.pages %}{% else %}{% assign pages = site.pages %}{% endif %}
+<!DOCTYPE html>
+<html class="no-js">
+
+  {% include head.html %}
+
+  <body>
+  	<div class="body-wrapper wrapper row">	
+	    <div class="column small-12 medium-9">
+	
+	      {% include header.html pages=pages %}
+	
+	      <div class="column small-12">
+	        {{ content }}
+	      </div>
+	    </div>
+	
+	    <div class="column small-12 medium-3">
+	      <!-- <div> -->
+	      <div class="hide-for-small-only">
+	        <div class="ese-logo small-12 column">
+	        	<img src="/img/ese-logo.png" />
+	        </div>
+	      </div>
+	      <div class="hide-for-small-only">
+	        <div class="column sidebar-header small-12">&nbsp;</div>
+	      </div>
+	      <!-- </div> -->
+	      {% include sidebar.html items=items %}
+	    </div>
+	    <div class="column small-12">
+	  		{% include footer.html %}
+	    </div>
+  	</div>
+		
+		<div class="no-js-message row round alert-box alert">
+			<div class="columns small-8 small-centered">
+				<h2>
+					ESE 2015 - ATTENTION
+				</h2>
+			</div>
+			<div class="columns small-8 small-centered">
+				<p>
+					Please enable JavaScript to state that you are not a search engine crawler.
+				</p>
+			</div>
+		</div>
+		
+		<div class="crawler-message row round alert-box warning">
+			<div class="columns small-8 small-centered">
+				<h2>
+					ESE 2015 - ATTENTION
+				</h2>
+			</div>
+			<div class="columns small-8 small-centered">
+				<p>
+					This is just a preview. Please go to the official site <a href="https://ese.ifsr.de">here</a>.
+				</p>
+			</div>
+		</div>
+		
+		<div id="developer-preview-message" class="alert-box alert full reveal-modal" data-reveal="" aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  		<h2 id="modalTitle">This is a developer preview site.</h2>
+  		<p class="lead">This site is only for developers. - Continue without warranty!</p>
+  		<p>Please refrain from looking at this site if you are not a developer in charge. We cannot be held responsible if anything bad happens to you. This site will possibly burn your house, kill your pets and humilate your family. By closing this box you state that you acknowledge our warnings.</p>
+  		<p>Later the much more harmless site can be found here: <a href="https://ese.ifsr.de" target="_blank">ESE IFSR</a></p>
+  		<a href="#" id="developer-preview-message-close" class="small success button" aria-label="Close">I understand! Please let me in.</a>
+		</div>
+		
+		<div class="blackout-box">&nbsp;</div>
+  {% include lateload-scripts.html %}
+  </body>
+
+</html>
