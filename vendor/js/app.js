@@ -33,12 +33,28 @@ $(document).ready(function(){
     /**
      * Developer Preview Message Reveal
      */
-    if(!$( "html" ).hasClass( "crawler" )) {
+    if(!$( "html" ).hasClass( "crawler" ) && document.cookie != "dev_keks=42") {
     	$('#developer-preview-message').foundation('reveal', 'open');
+    	$('.body-wrapper').hide();
     }
     
+    /**
+     * Set the cookie and close the reveal message
+     */
     $("#developer-preview-message-close").on('click', function() {
+    	setDevCookie(5);
+    	$('.body-wrapper').show();
   		$('#developer-preview-message').foundation('reveal', 'close');
 		});
+		
+		/**
+		 * Function to set a cookie that expires in @days
+		 */
+		function setDevCookie(days) {
+			var expireDate = new Date();
+			expireDate.setDate(expireDate.getDate() + days); 
+			expireDate.toUTCString();
+  		document.cookie = 'dev_keks=42; expires=' + expireDate + '; path=/';
+		}
 
 });
