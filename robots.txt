@@ -1,0 +1,5 @@
+# Prevent early search egine indexing of the preview site
+# This should be changed later
+
+User-agent: *
+Disallow: /
