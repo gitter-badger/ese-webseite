@@ -4,7 +4,6 @@
 	{% if include.pages %}{% assign pages = include.pages %}{% else %}{% assign pages = site.pages %}{% endif %}
   {% include head.html %}
 
-
   <body>
   	<div id="skip-link">
   		<a class="element-invisible element-focusable" href="#content">Skip to Content</a>
@@ -26,6 +25,7 @@
 	  		{% include footer.html %}
 	    </div>
 	  </div>
+	{% include overlay-messages.html %}
   {% include lateload-scripts.html %}
   </body>
 
