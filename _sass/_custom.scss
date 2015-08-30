@@ -1,3 +1,12 @@
+a {
+  outline: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
 .no-js {
   .body-wrapper {
     display: none;
@@ -253,4 +262,33 @@ table.event {
     position: static !important;
   
   }
+}
+
+/**
+ *   Language icons
+ */
+.language-switcher {
+  
+  img.language-icon {
+    filter: url("/ese-webseite/css/img/desaturate.svg#greyscale");
+  }
+  
+  .language-link {
+    text-decoration: none;
+    
+    &.active {
+      cursor: default;
+      
+    }
+    &.active,
+    &:hover,
+    &:active,
+    &:focus {
+      
+      img.language-icon {
+        filter: none;
+      
+      }
+    }
+  } 
 }

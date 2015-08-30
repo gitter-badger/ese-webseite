@@ -2,16 +2,18 @@
 index: 100
 title: Sprachen
 ---
-<ul class="qtrans_language_chooser" id="qtranslate-2-chooser">
-<li class="lang-de active">
-<a href="index.html" hreflang="de" title="Deutsch" class="qtrans_flag qtrans_flag_de">
-   <span style="display:none">Deutsch</span>
-</a>
-</li>
-<li class="lang-en">
-<a href="index_en.html" hreflang="en" title="English" class="qtrans_flag qtrans_flag_en">
-   <span style="display:none">English</span>
-</a>
-</li>
-</ul>
-<div class="qtrans_widget_end"></div>
+
+<div class="language-switcher i18n">
+	<ul class="language-list i18n">
+		<li class="language-switch i18n de">
+			<a class="language-link" href="{{ site.baseurl }}/" hreflang="de">
+				<img class="language-icon" width="20" height="12" src="{{ site.baseurl }}/img/flags/de.png" />&nbsp;<span class="hide-for-small-only">German</span>
+			</a>
+		</li>
+		<li class="language-switch i18n en active">
+			<a class="language-link active" href="{{ site.baseurl }}/en" hreflang="en">
+				<img class="language-icon" width="20" height="12" src="{{ site.baseurl }}/img/flags/en.png" />&nbsp;<span class="hide-for-small-only">English</span>
+			</a>
+		</li>
+	</ul>
+</div>
