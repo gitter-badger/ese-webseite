@@ -1,5 +1,4 @@
-.no-js,
-.crawler {
+.no-js {
   .body-wrapper {
     display: none;
   }
@@ -23,14 +22,6 @@
   }
 }
 
-.crawler {
-  .crawler-message {
-    display: block;
-    position: relative;
-    z-index: 1337;
-  }
-}
-
 .developer-preview-message {
   display: block;
   position: relative;
@@ -38,7 +29,6 @@
 }
 
 .no-js-message,
-.crawler-message,
 .developer-preview-message-hidden {
   display: none;
 }

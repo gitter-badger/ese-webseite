@@ -25,8 +25,8 @@ $(document).ready(function(){
      * This is only for the development site gh-pages
      */
     if(/bot|googlebot|crawler|spider|robot|crawling/i.test(window.navigator.userAgent)) {
-	    $('html').removeAttr("class");
-	    $('html').addClass("crawler");
+    	$('#crawler-message').foundation('reveal', 'open');
+    	$('.body-wrapper').hide();
 	    window.location.replace("https://ese.ifsr.de");
     }
     
