@@ -44,6 +44,60 @@ a {
   @extend .small;
 }
 
+a {
+  outline: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.no-js {
+  .body-wrapper {
+    display: none;
+  }
+  .blackout-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 42;
+  }
+}
+
+.no-js {
+  .no-js-message {
+    display: block;
+    position: relative;
+    z-index: 1337;
+  }
+}
+
+.no-js-message, {
+  display: none;
+}
+
+
+.js-only {
+  display: none;
+}
+
+
+html.js .js-only {
+  display: block;
+  &.inline {
+    display: inline;
+  }
+  &.inline-block {
+    display: inline-block;
+  }
+
+}
+
 .sidebar-item {
   color: white;
   background-color: $brand-color;
@@ -291,4 +345,52 @@ table.event {
       }
     }
   } 
+}
+
+/**
+ *   Styles for the Skip link
+ */
+.element-invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+
+  &.element-focusable:active,
+  &.element-focusable:focus {
+    clip: auto;
+    height: auto;
+    overflow: visible;
+    position: static !important;
+
+  }
+}
+
+/**
+ *   Language icons
+ */
+.language-switcher {
+
+  img.language-icon {
+    filter: url("/ese-webseite/css/img/desaturate.svg#greyscale");
+  }
+
+  .language-link {
+    text-decoration: none;
+
+    &.active {
+      cursor: default;
+
+    }
+    &.active,
+    &:hover,
+    &:active,
+    &:focus {
+
+      img.language-icon {
+        filter: none;
+
+      }
+    }
+  }
 }
