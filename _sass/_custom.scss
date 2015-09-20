@@ -157,7 +157,7 @@ html.js .js-only {
 }
 
 /**
- * 
+ * Timetable
  */
 table {
   
@@ -201,6 +201,15 @@ table {
   }
 
   th {
+  }
+}
+
+ul.accordion {
+  margin-left: 0;
+  
+  .accordion-navigation > #timetable.content {
+    padding: 0;
+    
   }
 }
 
