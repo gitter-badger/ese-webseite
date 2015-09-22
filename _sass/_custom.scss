@@ -1,15 +1,18 @@
 a {
   outline: 0;
+  
   &:hover,
   &:active,
   &:focus {
     outline: 0;
+    
   }
 }
 
 .no-js {
   .body-wrapper {
     display: none;
+    
   }
   .blackout-box {
     position: absolute;
@@ -20,6 +23,7 @@ a {
     left: 0;
     display: block;
     z-index: 42;
+    
   }
 }
 
@@ -33,34 +37,25 @@ a {
 
 .no-js-message, {
   display: none;
+  
 }
 
 .blackout-box {
   display: none;
   background: #000000;
+  
 }
 
 .show-more {
   @extend .small;
-  
-}
 
-a {
-  outline: 0;
-  
-  &:hover,
-  &:active,
-  &:focus {
-    outline: 0;
-    
-  }
 }
 
 .no-js {
-  
+
   .body-wrapper {
     display: none;
-    
+
   }
   .blackout-box {
     position: absolute;
@@ -71,146 +66,170 @@ a {
     left: 0;
     display: block;
     z-index: 42;
-    
+
   }
 }
 
 .no-js {
-  
+
   .no-js-message {
     display: block;
     position: relative;
     z-index: 1337;
-    
+
   }
 }
 
 .no-js-message, {
   display: none;
-  
+
 }
 
 .js-only {
   display: none;
-  
+
 }
 
 html.js .js-only {
   display: block;
-  
+
   &.inline {
     display: inline;
-    
+
   }
   &.inline-block {
     display: inline-block;
-    
+
   }
 }
 
 /**
  * Sidebar Styles
  */
+
+.ese-logo {
+  margin-bottom: 0.9rem;
+}
+
 .sidebar-item {
   color: white;
-  background-color: $brand-color;
-  margin-top: 12px;
+  background-color: $color-primary;
+  margin-bottom: 5px;
   padding-top: 7px;
-  
+
 }
 
 .sidebar-header {
   height:55px;
   margin:0;
   padding:0;
-  
+
 }
 
 .sidebar {
   color: white;
-  
+
   h1, h2, h3, h4, h5 {
     color: white;
-    
+    text-align: left;
+
   }
   .sidebar-item p {
     font-size: small;
-    
+
   }
   a {
     color: white;
     text-decoration: underline;
-    
+
     &:hover,
     &:active,
     &:focus {
       color: #DDDDDD;
-      
+
     }
   }
 }
 
-.sidebar-header {
-  min-height: 20px;
-  @extend .sidebar-item;
-  
+.language-list li {
+  display: inline-block;
+  margin: 2px 0 0 5px;
+}
+
+.language-list img {
+  margin-top: -3px;
 }
 
 /**
  * Timetable
  */
 table {
-  
+
+  background-color: #F5F5F5;
+
+  th {
+    /*padding: 0.5rem !important; /*sorry, found no other way.. */
+  }
+
   tr {
-    
+
     td {
       vertical-align: top;
       padding: 0;
-      
+      background-color: #EFEFEF;
+
       &.date {
         padding: 9px 10px;
-        
+        background-color: #F5F5F5; 
+
         & > div {
           font-weight: bold;
-          
+
         }
       }
       &.data {
         border: 1px solid black;
-        
+
+        &:hover {
+          background-color: #D8D8D8;
+        }
       }
+
       div.table-spacer {
         height: 1.4em;
-        
+        background-color: #F5F5F5;
+
       }
       .data {
-        padding: 6px 9px;
+        padding: 4px 6px;
         height: 2em;
         overflow: visible;
-        
+
       }
       &.time > div {
         padding: 1px 3px;
-        
+
       }
     }
     &.even, &.alt, &:nth-of-type(2n) {
-      background: white;
-      
+      background: #F5F5F5;
+
     }
   }
-
-  th {
-  }
+  
 }
 
 ul.accordion {
   margin-left: 0;
-  
+
   .accordion-navigation > #timetable.content {
     padding: 0;
-    
+
   }
+}
+
+.accordion .accordion-navigation>.content.active, .accordion dd>.content.active {
+    background: #f5f5f5;
 }
 
 /**
@@ -221,14 +240,14 @@ ul.accordion {
   height: 1px;
   overflow: hidden;
   position: absolute !important;
- 
+  
   &.element-focusable:active,
   &.element-focusable:focus {
     clip: auto;
     height: auto;
     overflow: visible;
     position: static !important;
-  
+    
   }
 }
 
@@ -236,32 +255,32 @@ ul.accordion {
  *   Language switcher
  */
 .language-switcher {
-  
+
   .language-list {
     list-style: none;
     margin-left: 0;
   }
 
   img.language-icon {
-    filter: url("/ese-webseite/css/img/desaturate.svg#greyscale");
+    filter: url(" #{$baseurl}/css/img/desaturate.svg#greyscale");
     
   }
 
   .language-link {
     text-decoration: none;
-    
+
     &.active {
       cursor: default;
       pointer-events: none;
-      
+
     }
     &.active,
     &:hover,
     &:focus {
-      
+
       img.language-icon {
         filter: none;
-        
+
       }
     }
   }
