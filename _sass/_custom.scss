@@ -1,87 +1,20 @@
-a {
-  outline: 0;
-  
-  &:hover,
-  &:active,
-  &:focus {
-    outline: 0;
-    
-  }
-}
-
-.no-js {
-  .body-wrapper {
-    display: none;
-    
-  }
-  .blackout-box {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 42;
-    
-  }
-}
-
-.no-js {
-  .no-js-message {
-    display: block;
-    position: relative;
-    z-index: 1337;
-  }
+.show-more {
+  @extend .small;
 }
 
 .no-js-message, {
   display: none;
-  
+
 }
 
 .blackout-box {
   display: none;
   background: #000000;
-  
+
 }
 
 .show-more {
   @extend .small;
-
-}
-
-.no-js {
-
-  .body-wrapper {
-    display: none;
-
-  }
-  .blackout-box {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 42;
-
-  }
-}
-
-.no-js {
-
-  .no-js-message {
-    display: block;
-    position: relative;
-    z-index: 1337;
-
-  }
-}
-
-.no-js-message, {
-  display: none;
 
 }
 
@@ -180,7 +113,7 @@ table {
 
       &.date {
         padding: 9px 10px;
-        background-color: #F5F5F5; 
+        background-color: #F5F5F5;
 
         & > div {
           font-weight: bold;
@@ -216,7 +149,7 @@ table {
 
     }
   }
-  
+
 }
 
 ul.accordion {
@@ -240,14 +173,14 @@ ul.accordion {
   height: 1px;
   overflow: hidden;
   position: absolute !important;
-  
+
   &.element-focusable:active,
   &.element-focusable:focus {
     clip: auto;
     height: auto;
     overflow: visible;
     position: static !important;
-    
+
   }
 }
 
@@ -263,7 +196,7 @@ ul.accordion {
 
   img.language-icon {
     filter: url(" #{$baseurl}/css/img/desaturate.svg#greyscale");
-    
+
   }
 
   .language-link {

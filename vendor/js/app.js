@@ -5,7 +5,7 @@ $(document).ready(function(){
 	 * Initialize Foundation JS
 	 */
 	$(document).foundation();
-	
+
 	/**
 	 * Initialize Slick Slider
 	 */
@@ -19,7 +19,7 @@ $(document).ready(function(){
 	    // Disable navigation arrows
 	    arrows: false
 	});
-	
+
 	/**
 	 * Test if a SE Bot tries to look at the site
 	 * This is only for the development site gh-pages
@@ -29,7 +29,7 @@ $(document).ready(function(){
 		$('.body-wrapper').hide();
 	  window.location.replace("https://ese.ifsr.de");
 	}
-	
+
 	/**
 	 * Developer Preview Message Reveal
 	 */
@@ -37,7 +37,7 @@ $(document).ready(function(){
 		$('#developer-preview-message').foundation('reveal', 'open');
 		$('.body-wrapper').hide();
 	}
-	
+
 	/**
 	 * Set the cookie and close the reveal message
 	 */
@@ -46,21 +46,21 @@ $(document).ready(function(){
 		$('.body-wrapper').show();
 		$('#developer-preview-message').foundation('reveal', 'close');
 	});
-	
+
 	$('.language-link.active').click(function() {
 		return false;
 	});
-	
+
 	/**
 	 * Function to set a cookie that expires in @days
 	 */
 	function setDevCookie(days) {
-		
+
 		var expireDate = new Date();
-		expireDate.setDate(expireDate.getDate() + days); 
+		expireDate.setDate(expireDate.getDate() + days);
 		expireDate.toUTCString();
-		
+
 		document.cookie = 'dev_keks=42; expires=' + expireDate + '; path=/';
 	};
-	
+
 });
