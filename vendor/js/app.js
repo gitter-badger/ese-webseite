@@ -10,14 +10,15 @@ $(document).ready(function(){
 	 * Initialize Slick Slider
 	 */
 	$('.slider').slick({
-	    lazyLoad: 'progressive',
-	    dots: false,
-	    infinite: true,
-	    autoplay: true,
-	    autoplaySpeed: 10000,
-	    slidesToShow: 1,
-	    // Disable navigation arrows
-	    arrows: false
+		lazyLoad: 'progressive',
+		dots: false,
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		slidesToShow: 1,
+		accessbility: true,
+		// Disable navigation arrows
+		arrows: false
 	});
 
 	/**
@@ -47,10 +48,6 @@ $(document).ready(function(){
 		$('#developer-preview-message').foundation('reveal', 'close');
 	});
 
-	$('.language-link.active').click(function() {
-		return false;
-	});
-
 	/**
 	 * Function to set a cookie that expires in @days
 	 */
@@ -62,5 +59,4 @@ $(document).ready(function(){
 
 		document.cookie = 'dev_keks=42; expires=' + expireDate + '; path=/';
 	};
-
 });
