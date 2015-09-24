@@ -10,7 +10,7 @@ $(document).ready(function(){
 	 * Initialize Slick Slider
 	 */
 	$('.slider').slick({
-	    lazyLoad: 'ondemand',
+	    lazyLoad: 'progressive',
 	    dots: false,
 	    infinite: true,
 	    autoplay: true,
