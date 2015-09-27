@@ -14,8 +14,25 @@ Und falls ihr euch jetzt fragt wer hier "wir" ist: Wir sind die [ESE-Tutoren](fo
 
 Die ESE startet am Montag mit Frühstück um 9 Uhr. Bring bitte am Montag deinen **Studentenausweis**, deine **E-Meal Bescheinigung** (Immatrikulationsbogen) und **10 Euro** (5€ Pfand + 5€ oder mehr als Guthaben) für die Mensakarte mit.
 
-*Wenn nicht anders angegeben finden alle Veranstaltungen in der Fakultät Informatik im Raum E023 (einfach im Foyer Tutoren in lila Shirts folgen).*
+*Wenn nicht anders angegeben, finden alle Veranstaltungen in dem Andreas-Pfitzmann-Bau im Raum E023 statt. (einfach im Foyer den Tutoren in lila Shirts folgen).*
 
-{% include timetable.html %}
 
-[Download](ESE.ics) des aktuellen Zeitplans als iCal Datei. Kann direkt in den Kalender importiert werden. Aber Achtung: Updatet sich nicht von selbst!
+<div id="eventlist" class="show-for-small-only">
+	{% include eventlist.html %}
+</div>
+<ul class="accordion hide-for-small-only" data-accordion="" role="tablist">
+  <li class="accordion-navigation">
+    <a href="#timetable" role="tab" id="timetable-heading" aria-controls="timetable">Zeitplan</a>
+    <div id="timetable" class="content active" role="tabpanel" aria-labelledby="timetable-heading">
+			{% include timetable.html %}
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#barrierfree" role="tab" id="barrierfree-heading" aria-controls="barrierfree">Barierefreier Zeitplan</a>
+    <div id="barrierfree" class="content" role="tabpanel" aria-labelledby="barrierfree-heading">
+   		{% include eventlist.html %}
+    </div>
+  </li>
+</ul>
+
+[Download](ESE.ics) des aktuellen Zeitplans als iCal-Datei. Kann direkt in den Kalender importiert werden.
