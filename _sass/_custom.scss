@@ -28,9 +28,13 @@ a {
 /**
  * No-js Message Crawler
  */
-.no-js-message,
-.blackout-box {
-  display: none;
+.js {
+  
+  .no-js-message,
+  .blackout-box {
+    display: none;
+    
+  }
 }
 
 .no-js {
@@ -50,6 +54,7 @@ a {
     
   }
   .blackout-box {
+    background: #000000;
     position: absolute;
     height: 100%;
     width: 100%;
