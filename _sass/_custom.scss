@@ -26,6 +26,42 @@ a {
 }
 
 /**
+ * No-js Message Crawler
+ */
+.no-js-message,
+.blackout-box {
+  display: none;
+}
+
+.no-js {
+  
+  div[role=document] {
+    display: none;
+    
+  }
+  .no-js-message,
+  .blackout-box {
+    display: block;
+    
+  }
+  .no-js-message {
+    position: relative;
+    z-index: 1337;
+    
+  }
+  .blackout-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 42;
+    
+  }
+}
+
+/**
  * JS and non-JS Styles
  */
 .js-only {
