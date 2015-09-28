@@ -8,12 +8,28 @@
 
   <link hreflang="en" href="index_en.html" rel="alternate">
 
+  {% assign path = site.data.icons.apple.path %}
+  {% for group in site.data.icons.groups %}
+    {% assign path = group.path %}
+    {% capture rel %}{% if group.rel %}{{ group.rel }}{% else %}icon{% endif %}{% endcapture %}
+    {% for size in group.sizes %}
+      {% if group.type == "ms" %}
+        <meta name="msapplication-TileImage" content="{{ path | append: size | append: ".png" | prepend: site.baseurl }}">
+      {% else %}
+        <link rel="{{ rel }}" type="image/png" href="{{ path | append: size | append: ".png" | prepend: site.baseurl }}" sizes="{{ size }}">
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  <link rel="manifest" href="{{ site.data.icons.android-manifest | prepend: site.baseurl }}">
+  <meta name="msapplication-TileColor" content="{{ site.data.icons.ms-tilecolor }}">
+  <meta name="theme-color" content="{{ site.color }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+
   {% for sheet in site.data.stylesheets.default.head %}
     {% include stylesheet.html stylesheet=sheet %}
   {% endfor %}
-
-  <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
-
+  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
