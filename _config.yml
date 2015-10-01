@@ -2,15 +2,8 @@
 title: "ESE 2015 | iFSR"
 email: ese@ifsr.de
 emailfsr: fsr@ifsr.de
-<<<<<<< HEAD
-description: > # this means to ignore newlines until "baseurl:"
-  Die offizielle Seite der ESE 2015
 baseurl: "/ese-webseite" # the subpath of your site, e.g. /blog/
 url: "https://fsr.github.io" # the base hostname & protocol for your site
-=======
-baseurl: "/2015" # the subpath of your site, e.g. /blog/
-url: "https://ese.ifsr.de" # the base hostname & protocol for your site
->>>>>>> metatags
 twitter_username: ifsr
 github_username:  fsr
 color: "#573B75"
