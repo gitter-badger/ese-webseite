@@ -213,10 +213,13 @@ ul.accordion {
   }
 }
 
-#barrierfree .en,
+#barrierfree,
 #eventlist {
-  color: $success-color;
   
+  .en {
+    color: $success-color;
+    
+  }
 }
 
 /**
